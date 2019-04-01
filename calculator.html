@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		var calculator = new Object();
+		calculator.add = function(x, y) {
+			return parseInt(x) + parseInt(y);
+		}
+		calculator.subtract = function(x, y) {
+			return parseInt(x) - parseInt(y);
+		}
+		calculator.divide = function(x, y) {
+			return parseInt(x) / parseInt(y);
+		}
+		calculator.multiply = function(x, y) {
+			return parseInt(x) * parseInt(y);
+		}
+		
+		var calculate = function() {
+			console.dir(this);
+			
+			var x = document.querySelector("#x");
+			var y = document.querySelector("#y");
+			
+			var result;
+
+			if(this.id == "btnadd") {
+				result = calculator.add(x.value, y.value); 
+				console.log(result);
+			}
+
+			else if (this.id == "btnsub") {
+				result = calculator.subtract(x.value, y.value); 
+				console.log(result);
+			}
+
+			else if (this.id == "btnmul") {
+				result = calculator.multiply(x.value, y.value); 
+				console.log(result);
+			}
+
+			else if (this.id == "btndiv") {
+				result = calculator.divide(x.value, y.value); 
+				console.log(result);
+			}
+
+			var out = document.querySelector("#out");
+			out.value = result;
+		}
+	</script>
+</head>
+<body>
+	X: <input type="text" id="x" />
+	Y: <input type="text" id="y" />
+	<input type="button" class="btn" id="btnadd" value="+" />
+	<input type="button" class="btn" id="btnsub" value="-" />
+	<input type="button" class="btn" id="btnmul" value="*" />
+	<input type="button" class="btn" id="btndiv" value="/" />
+	<output id="out" />
+
+	<script>
+		var btnadd = document.querySelector("#btnadd").value;
+		var btnsub = document.querySelector("#btnsub").value;
+		var btnadd = document.querySelector("#btnmul").value;
+		var btnadd = document.querySelector("#btndiv").value;
+
+
+		var btns = document.querySelectorAll(".btn");
+			console.log(btns);
+
+		for(i = 0;i<btns.length;i++) {
+			btns[i].addEventListener("click", calculate);
+		}
+	</script>
+</body>
+</html>
