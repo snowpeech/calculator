@@ -8,7 +8,7 @@
 // Display numbers as clicked
 // user clicks button, it shows up on display
 	//saves number as X
-	//prints it to display
+	//appears on display
 
 // if user clicks another number, then it shows up next to prev. value
 	//concatenates it to X X = X+ newNum
@@ -24,29 +24,72 @@ var display = document.getElementById("display")
 var firstNum;
 var secondNum;
 var operator;
+var arrCalcVals = []; //firstnumber, operator, secondnumber as strings. parseInt when processing?
 
 function recieve(btn){
-	var buttonId = btn.id;
+	var btnID = btn.id;
 	var btnValue = btn.value;
 	var dVal = display.value;
 
-	if(buttonId == 'number') {
-		display.value += btn.value;
-
-	} else if ( buttonId == 'operator') {
-		switch(btnValue){
-			case '+': coordinator('add');
-			break;
-			case '-':  subtract();
-			break;
-			case '/': divide();
-			break;
-			case '*': multiply();
-			break;
-			case '=': calculate(firstNum, secondNum);
-		}
+	function displayVal(){
+		display.value += btn.value; 
 	}
-}
+	
+	switch(btnID) {
+		case 'number': 
+			console.log("is number")
+			
+			switch(arrCalcVals.length){ 
+				case 0:  //first value is empty
+					displayVal();
+					break;
+				case 1:
+					display.value = btn.value; // need to verify
+					arrCalcVals = [];
+					break;
+				default: //should be length = 2 or 3 
+					displayVal();
+					arrCalcVals[2] = dVal; //need to verify
+					break;
+
+
+			};
+			break;
+				
+
+
+
+		
+		case 'operator': 
+			console.log("is operator")
+			break;
+		
+		case 'clear': 
+			console.log("clear")
+			document.querySelector("#display").value ="";
+			arrCalcVals = [];
+			break;
+
+	}
+
+
+	// if(btnID == 'number' && arrCalcVals[0]=='') {
+	// 	display.value += btn.value;
+
+	// } else if ( btnID == 'operator') {
+	// 	switch(btnValue){
+	// 		case '+': coordinator('add');
+	// 		break;
+	// 		case '-':  subtract();
+	// 		break;
+	// 		case '/': divide();
+	// 		break;
+	// 		case '*': multiply();
+	// 		break;
+	// 		case '=': calculate(firstNum, secondNum);
+	// 	}
+	// }
+} //end receive btn function
 
 function coordinator(action) {
 	if(action == 'add') {
@@ -54,6 +97,6 @@ function coordinator(action) {
 	}
 }
 
-function calculate(fnum, operator, snum) {
-	return fnum operator snum;
-}
+// function calculate(fnum, operator, snum) {
+// 	return fnum operator snum;
+// }
