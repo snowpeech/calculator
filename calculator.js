@@ -34,6 +34,11 @@ function recieve(btn){
 	function displayVal(){
 		display.value += btn.value; 
 	}
+
+	function clearDisplay(){
+		document.querySelector("#display").value ="";
+		console.log("clear function called")
+	}
 	
 	switch(btnID) {
 		case 'number': 
@@ -43,24 +48,34 @@ function recieve(btn){
 				case 0:  //first value is empty
 					displayVal();
 					console.log("calc array has 0 value")
+					console.log(arrCalcVals)
 					break;
 				case 1:
 					display.value = btnValue; // need to verify
 					arrCalcVals = [];
 					console.log("calc array has 1 value")
+					console.log("dval = "+dVal)
+					console.log(arrCalcVals)
 					break;
-				case 2: //DEBUG HERE
+				case 2: //DEBUG HERE - operator is stored
 					clearDisplay(); //DEBUG HERE ESPECIALLY
-					display.value = btnValue;
-					arrCalcVals[2] = dVal;
-					console.log(arrCalcVals);
-					console.log("arr calc val has lenght 2")
-
+					displayVal();
+					arrCalcVals[2] = btnValue;
+					console.log("dval = "+dVal)
+					console.log(arrCalcVals)
+					break;
 				
+				case 3:
+					console.log("case number, 3")
+					break;
+
 				default: //should be length =  3 //DEBUG HERE
 					displayVal();
 					arrCalcVals[2] = dVal; //need to verify
-					console.log("calc array has > 1 value")
+					console.log(document.getElementById("display").value)
+					console.log("calc array length 3")
+					console.log("dval = "+dVal)
+					console.log(arrCalcVals)
 					break;
 
 
@@ -72,18 +87,19 @@ function recieve(btn){
 			console.log("is operator")
 			switch(arrCalcVals.length){ 
 				case 0:  //first value is empty
-					console.log("!calc array length = " + arrCalcVals.length)
 					arrCalcVals[0] = dVal;
 					arrCalcVals[1] = btnValue;
-					console.log("!calc array length = " + arrCalcVals.length)
+					console.log(arrCalcVals)
 					break;
 				case 3:
 					// will call calculate function
 					console.log("calc array has 3 values!")
+					console.log(arrCalcVals)
 					break;
 				default: //should be length = 1 or 2 
 					arrCalcVals[1] = btnValue; //need to verify
 					console.log("calc array has 1-2 values!")
+					console.log(arrCalcVals)
 					break;
 
 
@@ -98,10 +114,7 @@ function recieve(btn){
 
 	}
 
-	function clearDisplay(){
-		document.querySelector("#display").value ="";
-		console.log("clear function called")
-	}
+	
 
 	// if(btnID == 'number' && arrCalcVals[0]=='') {
 	// 	display.value += btn.value;
