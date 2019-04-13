@@ -47,35 +47,27 @@ function recieve(btn){
 			switch(arrCalcVals.length){ 
 				case 0:  //first value is empty
 					displayVal();
-					console.log("calc array has 0 value")
-					console.log(arrCalcVals)
 					break;
 				case 1:
-					display.value = btnValue; // need to verify
+					display.value = btnValue; 
 					arrCalcVals = [];
-					console.log("calc array has 1 value")
-					console.log("dval = "+dVal)
-					console.log(arrCalcVals)
 					break;
-				case 2: //DEBUG HERE - operator is stored
-					clearDisplay(); //DEBUG HERE ESPECIALLY
+				case 2: 
+					clearDisplay(); 
 					displayVal();
 					arrCalcVals[2] = btnValue;
-					console.log("dval = "+dVal)
 					console.log(arrCalcVals)
 					break;
 				
 				case 3:
 					console.log("case number, 3")
+					displayVal();
+					arrCalcVals[2] = document.getElementById("display").value;
+					console.log(arrCalcVals)
 					break;
 
-				default: //should be length =  3 //DEBUG HERE
-					displayVal();
-					arrCalcVals[2] = dVal; //need to verify
-					console.log(document.getElementById("display").value)
-					console.log("calc array length 3")
-					console.log("dval = "+dVal)
-					console.log(arrCalcVals)
+				default: //not sure how the user would get here..
+					console.log("how did you get here?")
 					break;
 
 
