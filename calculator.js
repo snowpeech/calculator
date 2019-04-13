@@ -42,14 +42,25 @@ function recieve(btn){
 			switch(arrCalcVals.length){ 
 				case 0:  //first value is empty
 					displayVal();
+					console.log("calc array has 0 value")
 					break;
 				case 1:
-					display.value = btn.value; // need to verify
+					display.value = btnValue; // need to verify
 					arrCalcVals = [];
+					console.log("calc array has 1 value")
 					break;
-				default: //should be length = 2 or 3 
+				case 2: //DEBUG HERE
+					clearDisplay(); //DEBUG HERE ESPECIALLY
+					display.value = btnValue;
+					arrCalcVals[2] = dVal;
+					console.log(arrCalcVals);
+					console.log("arr calc val has lenght 2")
+
+				
+				default: //should be length =  3 //DEBUG HERE
 					displayVal();
 					arrCalcVals[2] = dVal; //need to verify
+					console.log("calc array has > 1 value")
 					break;
 
 
@@ -57,21 +68,40 @@ function recieve(btn){
 			break;
 				
 
-
-
-		
 		case 'operator': 
 			console.log("is operator")
+			switch(arrCalcVals.length){ 
+				case 0:  //first value is empty
+					console.log("!calc array length = " + arrCalcVals.length)
+					arrCalcVals[0] = dVal;
+					arrCalcVals[1] = btnValue;
+					console.log("!calc array length = " + arrCalcVals.length)
+					break;
+				case 3:
+					// will call calculate function
+					console.log("calc array has 3 values!")
+					break;
+				default: //should be length = 1 or 2 
+					arrCalcVals[1] = btnValue; //need to verify
+					console.log("calc array has 1-2 values!")
+					break;
+
+
+			};
 			break;
 		
 		case 'clear': 
 			console.log("clear")
-			document.querySelector("#display").value ="";
+			clearDisplay();
 			arrCalcVals = [];
 			break;
 
 	}
 
+	function clearDisplay(){
+		document.querySelector("#display").value ="";
+		console.log("clear function called")
+	}
 
 	// if(btnID == 'number' && arrCalcVals[0]=='') {
 	// 	display.value += btn.value;
