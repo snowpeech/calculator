@@ -24,6 +24,7 @@ var display = document.getElementById("display")
 var firstNum;
 var secondNum;
 var operator;
+var answer;
 var arrCalcVals = []; //firstnumber, operator, secondnumber as strings. parseInt when processing?
 
 function recieve(btn){
@@ -37,7 +38,39 @@ function recieve(btn){
 
 	function clearDisplay(){
 		document.querySelector("#display").value ="";
-		console.log("clear function called")
+	}
+
+	function compute(inArray){
+		console.log("compute function")
+		switch(inArray[1]){
+			case '+':
+				console.log("+")
+				console.log(inArray[0])
+				console.log(inArray[1])
+				console.log(inArray[2])
+				answer = parseInt(inArray[0]) + parseInt(inArray[2]);
+				display.value = answer;
+				console.log(answer)
+				return answer;
+			break;
+
+			case '-':
+				console.log("-")
+				answer = inArray[0] - inArray[2];
+				return answer;
+			break;
+
+			case '*':
+				answer = inArray[0] * inArray[2];
+				return answer;
+			break;
+
+			case '/':
+				answer = inArray[0] / inArray[2];
+				return answer;
+			break;
+		}
+
 	}
 	
 	switch(btnID) {
@@ -69,22 +102,20 @@ function recieve(btn){
 				default: //not sure how the user would get here..
 					console.log("how did you get here?")
 					break;
-
-
 			};
 			break;
-				
 
 		case 'operator': 
 			console.log("is operator")
 			switch(arrCalcVals.length){ 
 				case 0:  //first value is empty
-					arrCalcVals[0] = dVal;
-					arrCalcVals[1] = btnValue;
+					arrCalcVals[0] = dVal; // shifty. not sure where this is right now
+					arrCalcVals[1] = btnValue;	
 					console.log(arrCalcVals)
+					console.log("do nothing for now")//will update when calculate funtion is working
 					break;
 				case 3:
-					// will call calculate function
+					compute(arrCalcVals); // will call calculate function
 					console.log("calc array has 3 values!")
 					console.log(arrCalcVals)
 					break;
@@ -92,9 +123,8 @@ function recieve(btn){
 					arrCalcVals[1] = btnValue; //need to verify
 					console.log("calc array has 1-2 values!")
 					console.log(arrCalcVals)
+					console.log(arrCalcVals.length)
 					break;
-
-
 			};
 			break;
 		
@@ -102,6 +132,13 @@ function recieve(btn){
 			console.log("clear")
 			clearDisplay();
 			arrCalcVals = [];
+			break;
+		
+			case 'equal': 
+			compute(arrCalcVals); //should calculate and display value
+			arrCalcVals = [];
+			arrCalcVals[0] = display.value; //not sure if this is working either
+			
 			break;
 
 	}
