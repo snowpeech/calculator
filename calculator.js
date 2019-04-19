@@ -1,25 +1,3 @@
-// var xIn = document.querySelector("#xIn").value;
-// console.log(xIn);
-
-// function add(x,y){
-
-// }
-
-// Display numbers as clicked
-// user clicks button, it shows up on display
-	//saves number as X
-	//appears on display
-
-// if user clicks another number, then it shows up next to prev. value
-	//concatenates it to X X = X+ newNum
-	//prints to display
-
-
-// Functions
-// will take number in display (concatenated & parseInt) and wait for next number
-// will perform function once next non-number is clicked
-// if there are no numbers, do nothing.
-
 var display = document.getElementById("display")
 var firstNum;
 var secondNum;
@@ -42,33 +20,39 @@ function recieve(btn){
 
 	function compute(inArray){
 		console.log("compute function")
+		console.log(inArray)
 		switch(inArray[1]){
 			case '+':
-				console.log("+")
-				console.log(inArray[0])
-				console.log(inArray[1])
-				console.log(inArray[2])
 				answer = parseInt(inArray[0]) + parseInt(inArray[2]);
-				display.value = answer;
-				console.log(answer)
-				return answer;
+				resetDisplay(answer);
+				return inArray;
 			break;
 
 			case '-':
-				console.log("-")
-				answer = inArray[0] - inArray[2];
-				return answer;
+				answer = parseInt(inArray[0]) - parseInt(inArray[2]);
+				resetDisplay(answer);
+				return inArray;
 			break;
 
 			case '*':
-				answer = inArray[0] * inArray[2];
-				return answer;
+				answer = parseInt(inArray[0]) * parseInt(inArray[2]);
+				resetDisplay(answer);
+				return inArray;
 			break;
 
 			case '/':
-				answer = inArray[0] / inArray[2];
-				return answer;
+				answer = parseInt(inArray[0]) / parseInt(inArray[2]);
+				resetDisplay(answer);
+				return inArray;
 			break;
+		}
+		console.log("return inArray");
+		console.log(inArray);
+		
+		function resetDisplay(answer){
+			display.value = answer;
+			inArray = [];
+			inArray[0]=answer;
 		}
 
 	}
@@ -115,9 +99,11 @@ function recieve(btn){
 					console.log("do nothing for now")//will update when calculate funtion is working
 					break;
 				case 3:
-					compute(arrCalcVals); // will call calculate function
+					//compute(arrCalcVals); // will call calculate function
 					console.log("calc array has 3 values!")
 					console.log(arrCalcVals)
+					console.log("hope this works")
+					arrCalcVals = compute(arrCalcVals)
 					break;
 				default: //should be length = 1 or 2 
 					arrCalcVals[1] = btnValue; //need to verify
@@ -138,6 +124,7 @@ function recieve(btn){
 			compute(arrCalcVals); //should calculate and display value
 			arrCalcVals = [];
 			arrCalcVals[0] = display.value; //not sure if this is working either
+			console.log(arrCalcVals);
 			
 			break;
 
