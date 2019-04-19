@@ -115,10 +115,12 @@ function recieve(btn){
 					console.log(arrCalcVals)
 					console.log("hope this works")
 					arrCalcVals = compute(arrCalcVals)
+					arrCalcVals[1] = btnValue;
 					break;
 				case 1:
 					console.log("array length is: 1")
 					arrCalcVals[1] = btnValue;
+
 					break;
 
 				
