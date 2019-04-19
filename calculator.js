@@ -23,36 +23,47 @@ function recieve(btn){
 		console.log(inArray)
 		switch(inArray[1]){
 			case '+':
+				console.log("+")
 				answer = parseInt(inArray[0]) + parseInt(inArray[2]);
-				resetDisplay(answer);
+				inArray = resetDisplay(answer);
 				return inArray;
 			break;
 
 			case '-':
+				console.log("-")
 				answer = parseInt(inArray[0]) - parseInt(inArray[2]);
-				resetDisplay(answer);
+				inArray = resetDisplay(answer);
 				return inArray;
 			break;
 
 			case '*':
+				console.log("*")
 				answer = parseInt(inArray[0]) * parseInt(inArray[2]);
-				resetDisplay(answer);
+				inArray = resetDisplay(answer);
 				return inArray;
 			break;
 
 			case '/':
+				console.log("/")
 				answer = parseInt(inArray[0]) / parseInt(inArray[2]);
-				resetDisplay(answer);
+				inArray = resetDisplay(answer);
 				return inArray;
 			break;
+
+			default:
+				console.log("default")
+				resetDisplay(answer);
+				console.log(inArray)
+				return inArray;
 		}
-		console.log("return inArray");
-		console.log(inArray);
 		
 		function resetDisplay(answer){
 			display.value = answer;
 			inArray = [];
 			inArray[0]=answer;
+			console.log("reset display " + answer)
+			console.log(inArray)
+			return inArray;
 		}
 
 	}
@@ -105,9 +116,15 @@ function recieve(btn){
 					console.log("hope this works")
 					arrCalcVals = compute(arrCalcVals)
 					break;
+				case 1:
+					console.log("array length is: 1")
+					arrCalcVals[1] = btnValue;
+					break;
+
+				
 				default: //should be length = 1 or 2 
 					arrCalcVals[1] = btnValue; //need to verify
-					console.log("calc array length is: "+arrCalcVals.length)
+					console.log("calc array lengt is: "+arrCalcVals.length)
 					console.log(arrCalcVals)
 					break;
 			};
@@ -121,7 +138,7 @@ function recieve(btn){
 		
 		case 'equal': 
 			console.log("equals")
-			compute(arrCalcVals); //should calculate and display value
+			arrCalcVals = compute(arrCalcVals); //should calculate and display value
 			break;
 
 	}
