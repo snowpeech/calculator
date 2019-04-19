@@ -107,9 +107,8 @@ function recieve(btn){
 					break;
 				default: //should be length = 1 or 2 
 					arrCalcVals[1] = btnValue; //need to verify
-					console.log("calc array has 1-2 values!")
+					console.log("calc array length is: "+arrCalcVals.length)
 					console.log(arrCalcVals)
-					console.log(arrCalcVals.length)
 					break;
 			};
 			break;
@@ -120,12 +119,9 @@ function recieve(btn){
 			arrCalcVals = [];
 			break;
 		
-			case 'equal': 
+		case 'equal': 
+			console.log("equals")
 			compute(arrCalcVals); //should calculate and display value
-			arrCalcVals = [];
-			arrCalcVals[0] = display.value; //not sure if this is working either
-			console.log(arrCalcVals);
-			
 			break;
 
 	}
