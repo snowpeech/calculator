@@ -3,32 +3,44 @@
 <head>
 	<title>Simple Calculator </title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
+
+
+
 	<!-- <script type="text/javascript" src="calculator.js"></script> -->
 </head>
 <body>
-	<input id="display" readonly/>
+	<div>
+		<input id="display" readonly/>
 
-	<div class="input">
-		<input type="button" class ="number" name="btn" id="number" onclick="recieve(this)" value="1">
-		<input type="button" class ="number" name="btn" id="number" onclick="recieve(this)" value="2">
-		<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="3">
-		<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="4">
-		<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="5">
-		<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="6">
-		<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="7">
-		<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="8">
-		<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="9">
-		<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="0">
-		<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value=".">
-			<BR><BR>
-		<input class="button" type="button" id="operator" onclick="recieve(this)" value="+">
-		<input type="button" class="button" id="operator" onclick="recieve(this)" value="-">
-		<input type="button" class="button" id="operator" onclick="recieve(this)" value="*">
-		<input type="button" class="button" id="operator" onclick="recieve(this)" value="/">
-			<BR><BR>
-		<input type="button" class="button" id="equal" onclick="recieve(this)" value="=">
-		<input type="button" class="button" id="clear" onclick="recieve(this)" value="C">
-		
+		<div class="input">
+			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="7">
+			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="8">
+			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="9">
+			<br>
+			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="4">
+			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="5">
+			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="6">
+			<br>
+			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="1">
+			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="2">
+			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="3">
+			<br>
+			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="0">
+			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value=".">
+				<BR><BR>
+			
+			<button id="operator" onclick="recieve(this)" value="+"> +  </button>
+			<button id="operator" onclick="recieve(this)" value="-"> -  </button>
+			<button id="operator" onclick="recieve(this)" value="*"> x  </button>
+			<button id="operator" onclick="recieve(this)" value="/"> <i class="fas fa-divide"></i> </button>
+
+				<BR><BR>
+			<input type="button" class="button" id="equal" onclick="recieve(this)" value="=">
+			<input type="button" class="button" id="clear" onclick="recieve(this)" value="C">
+			
+		</div>
 	</div>
 
 

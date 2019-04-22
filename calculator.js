@@ -146,23 +146,6 @@ function recieve(btn){
 	}
 
 	
-
-	// if(btnID == 'number' && arrCalcVals[0]=='') {
-	// 	display.value += btn.value;
-
-	// } else if ( btnID == 'operator') {
-	// 	switch(btnValue){
-	// 		case '+': coordinator('add');
-	// 		break;
-	// 		case '-':  subtract();
-	// 		break;
-	// 		case '/': divide();
-	// 		break;
-	// 		case '*': multiply();
-	// 		break;
-	// 		case '=': calculate(firstNum, secondNum);
-	// 	}
-	// }
 } //end receive btn function
 
 function coordinator(action) {
