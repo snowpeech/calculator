@@ -24,28 +24,28 @@ function recieve(btn){
 		switch(inArray[1]){
 			case '+':
 				console.log("+")
-				answer = parseInt(inArray[0]) + parseInt(inArray[2]);
+				answer = Number(inArray[0]) + Number(inArray[2]);
 				inArray = resetDisplay(answer);
 				return inArray;
 			break;
 
 			case '-':
 				console.log("-")
-				answer = parseInt(inArray[0]) - parseInt(inArray[2]);
+				answer = Number(inArray[0]) - Number(inArray[2]);
 				inArray = resetDisplay(answer);
 				return inArray;
 			break;
 
 			case '*':
 				console.log("*")
-				answer = parseInt(inArray[0]) * parseInt(inArray[2]);
+				answer = Number(inArray[0]) * Number(inArray[2]);
 				inArray = resetDisplay(answer);
 				return inArray;
 			break;
 
 			case '/':
 				console.log("/")
-				answer = parseInt(inArray[0]) / parseInt(inArray[2]);
+				answer = Number(inArray[0]) / Number(inArray[2]);
 				inArray = resetDisplay(answer);
 				return inArray;
 			break;
