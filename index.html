@@ -15,27 +15,29 @@
 		<input id="display" readonly/>
 
 		<div class="input">
+			<button id="operator" class="button" onclick="recieve(this)" value="+"> +  </button>
+			<button id="operator" class="button" onclick="recieve(this)" value="-"> -  </button>
+			<button id="operator" class="button" onclick="recieve(this)" value="*"> x  </button>
+			<button id="operator" class="button" onclick="recieve(this)" value="/"> <i class="fas fa-divide"></i> </button>
+				<br>
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="7">
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="8">
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="9">
-			<br>
+			<input type="button" class="button" id="clear" onclick="recieve(this)" value="C">
+				<br>
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="4">
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="5">
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="6">
-			<br>
+				<br>
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="1">
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="2">
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="3">
-			<br>
+				<br>
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="0">
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value=".">
 				<BR><BR>
 			
-			<button id="operator" onclick="recieve(this)" value="+"> +  </button>
-			<button id="operator" onclick="recieve(this)" value="-"> -  </button>
-			<button id="operator" onclick="recieve(this)" value="*"> x  </button>
-			<button id="operator" onclick="recieve(this)" value="/"> <i class="fas fa-divide"></i> </button>
-
+			
 				<BR><BR>
 			<input type="button" class="button" id="equal" onclick="recieve(this)" value="=">
 			<input type="button" class="button" id="clear" onclick="recieve(this)" value="C">
