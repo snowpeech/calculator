@@ -1,19 +1,48 @@
 
-input, div, button {
+input, button {
 	font-family: 'Heebo', sans-serif;
 	font-weight: bold;
 	border-radius: 4px;
+	padding: 5px;
+	background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 body {
-	background: linear-gradient(#e66465, #9198e5);
+	background-image: url("sunsetlake.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     display:flex;
     justify-content: center;
 }
 
+#display {
+	margin:	7px 0px;
+	background: rgba(210,199,195,0.8);
+}
+
+#container {
+	background: rgba(255,255,255,0.3);
+	padding: 20px;
+	margin: 40px;
+	border-radius: 4px;
+}
+
+#operator {
+	width: 	23%;
+}
 .numBtn {
-	margin: 10px;
-	padding:4px 8px;
+    margin: 2px 0px;
+    padding: 4px 8px;
+    /*background: rgba(255,255,255,1.0);*/
+    width: 23%;
+}
+#clear {
+	height: 50%;
+}
+#equal {
+	width: 	45%;
+	background: rgba(210,199,195,0.8);
 }

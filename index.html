@@ -11,8 +11,9 @@
 	<!-- <script type="text/javascript" src="calculator.js"></script> -->
 </head>
 <body>
-	<div>
+	<div id="container">
 		<input id="display" readonly/>
+		<br>
 
 		<div class="input">
 			<button id="operator" class="button" onclick="recieve(this)" value="+"> +  </button>
@@ -24,6 +25,7 @@
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="8">
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="9">
 			<input type="button" class="button" id="clear" onclick="recieve(this)" value="C">
+
 				<br>
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="4">
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="5">
@@ -35,12 +37,11 @@
 				<br>
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="0">
 			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value=".">
-				<BR><BR>
-			
-			
-				<BR><BR>
 			<input type="button" class="button" id="equal" onclick="recieve(this)" value="=">
-			<input type="button" class="button" id="clear" onclick="recieve(this)" value="C">
+				<BR><BR>
+			
+			
+			
 			
 		</div>
 	</div>
