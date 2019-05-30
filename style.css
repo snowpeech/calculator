@@ -25,9 +25,22 @@ body {
 
 #container {
 	background: rgba(255,255,255,0.3);
-	padding: 20px;
+	padding: 20px 10px 20px 22px;
 	margin: 40px;
 	border-radius: 4px;
+	max-width:180px;
+}
+
+.main-content{
+	flex-wrap:wrap;
+	max-width:70%;
+	float:left;
+}
+
+.side-bar{
+	align-items:stretch;
+	margin: 1px 0px;
+	width: 	22%;
 }
 
 #operator {
@@ -36,13 +49,26 @@ body {
 .numBtn {
     margin: 2px 0px;
     padding: 4px 8px;
-    /*background: rgba(255,255,255,1.0);*/
-    width: 23%;
+    width: 33.3%;
 }
 #clear {
-	height: 50%;
+	width: 	98%;
+	background: rgba(251,187,169,0.4);
+}
+
+.extends-col{
+	flex:1;
+}
+
+.d-flex{
+	display:flex;
+}
+
+.bottom{
+	width: 	48%;
+	float: 	left;	
 }
 #equal {
-	width: 	45%;
+	width: 	93%;
 	background: rgba(210,199,195,0.8);
 }

@@ -16,33 +16,38 @@
 		<br>
 
 		<div class="input">
-			<button id="operator" class="button" onclick="recieve(this)" value="+"> +  </button>
-			<button id="operator" class="button" onclick="recieve(this)" value="-"> -  </button>
-			<button id="operator" class="button" onclick="recieve(this)" value="*"> x  </button>
-			<button id="operator" class="button" onclick="recieve(this)" value="/"> <i class="fas fa-divide"></i> </button>
-				<br>
-			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="7">
-			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="8">
-			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="9">
-			<input type="button" class="button" id="clear" onclick="recieve(this)" value="C">
+			<div class="d-flex">
+				<button id="operator" class="button" onclick="recieve(this)" value="+"> +  </button>
+				<button id="operator" class="button" onclick="recieve(this)" value="-"> -  </button>
+				<button id="operator" class="button" onclick="recieve(this)" value="*"> x  </button>
+				<button id="operator" class="button" onclick="recieve(this)" value="/"> <i class="fas fa-divide"></i></button>
+			</div>
+				
+			<div class="d-flex">
+				<div class="d-flex main-content">
+					<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="7">
+					<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="8">
+					<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="9">
+					<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="4">
+					<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="5">
+					<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="6">
+					<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="1">
+					<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="2">
+					<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="3">
+				</div>	
 
-				<br>
-			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="4">
-			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="5">
-			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="6">
-				<br>
-			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="1">
-			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="2">
-			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="3">
-				<br>
-			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value="0">
-			<input type="button" class ="numBtn" name="btn" id="number" onclick="recieve(this)" value=".">
-			<input type="button" class="button" id="equal" onclick="recieve(this)" value="=">
-				<BR><BR>
+				<div class="d-flex side-bar">
+					<input type="button" class="button extend-col" id="clear" onclick="recieve(this)" value="C">
+				</div>
+			 </div>
 			
-			
-			
-			
+			<div class="d-flex bottom">
+				<input type="button" class ="numBtn bottom" name="btn" id="number" onclick="recieve(this)" value="0">
+				<input type="button" class ="numBtn bottom" name="btn" id="number" onclick="recieve(this)" value=".">
+			</div>
+			<div class="d-flex bottom">
+				<input type="button" class="button" id="equal" onclick="recieve(this)" value="=">
+			</div>		
 		</div>
 	</div>
 
